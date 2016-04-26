@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Volume {
 	
+	
 	public static void areaHeightVolume(Scanner sc) {
 		float theLength;
 		float theWidth;
@@ -12,15 +13,15 @@ public class Volume {
 		
 		// User inputs Length
 		System.out.println("Enter Length:    ");
-		theLength = Float.parseFloat(sc.nextLine());
+		theLength = Validation.getValidFloat(1, 200000);
 		
 		// User inputs Width
 		System.out.println("Enter Width:    ");
-		theWidth = Float.parseFloat(sc.nextLine());
+		theWidth = Validation.getValidFloat(1, 200000);
 		
 		// User inputs Height
 		System.out.println("Enter Height:    ");
-		theHeight = Float.parseFloat(sc.nextLine());
+		theHeight = Validation.getValidFloat(1, 200000);
 		
 		// Calculate Area
 		float theArea = 2 * (theLength * theWidth);

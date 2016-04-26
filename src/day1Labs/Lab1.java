@@ -12,15 +12,13 @@ import java.text.NumberFormat;
  */
 public class Lab1 {
 
-	/**
-	 * @param args
-	 */
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		// Welcome message for user
 		System.out.println("Welcome to Grand Circus' Room Detail Generator!");
 		System.out.println();
 		
-		Scanner sc = new Scanner(System.in);
+		
 		String choice = "y";
 		
 		
@@ -31,7 +29,7 @@ public class Lab1 {
 			
 			// Ask if user wants to continue
 			System.out.println("Continue? (y/n): ");
-			choice = sc.nextLine();
+			choice = Validation.readYorN("y", "n");
 			System.out.println();
 		}
 		sc.close();
